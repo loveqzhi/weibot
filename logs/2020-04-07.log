@@ -1,0 +1,47 @@
+[2020/04/07 18:54:53] [warning] [yii\log\Dispatcher::dispatch] [Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'ERROR_NO:2
+,ERROR_STR:mkdir(): No such file or directory
+,ERROR_LINE:48
+,ERROR_FILE:/home/wwwroot/weibot/framework/vendor/yiisoft/yii2-debug/LogTarget.php
+,ENVIRONMENT:7.2.21 (Linux)' 
+
+in /home/wwwroot/weibot/framework/components/base/BaseController.php:178
+
+Stack trace:
+#0 [internal function]: BaseComponents\base\BaseController->apiErrorHandler(2, 'mkdir(): No suc...', '/home/wwwroot/w...', 48, Array)
+#1 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2-debug/LogTarget.php(48): mkdir('/home/wwwroot/w...')
+#2 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2-debug/LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#3 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#4 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#5 [internal function]: yii\log\Logger->flush(true)
+#6 {main}] [192.168.33.1] [["\/site\/index"]]
+
+[2020/04/07 18:54:53] [error] [yii\web\HttpException:404] [yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/wwwroot/weibot/web/index.php(29): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/wwwroot/weibot/web/index.php(29): yii\base\Application->run()
+#2 {main}] [192.168.33.1] [["\/favicon.ico"]]
+
+[2020/04/07 18:54:53] [warning] [yii\log\Dispatcher::dispatch] [Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'ERROR_NO:2
+,ERROR_STR:mkdir(): No such file or directory
+,ERROR_LINE:48
+,ERROR_FILE:/home/wwwroot/weibot/framework/vendor/yiisoft/yii2-debug/LogTarget.php
+,ENVIRONMENT:7.2.21 (Linux)' 
+
+in /home/wwwroot/weibot/framework/components/base/BaseController.php:178
+
+Stack trace:
+#0 [internal function]: BaseComponents\base\BaseController->apiErrorHandler(2, 'mkdir(): No suc...', '/home/wwwroot/w...', 48, Array)
+#1 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2-debug/LogTarget.php(48): mkdir('/home/wwwroot/w...')
+#2 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2-debug/LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#3 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#4 /home/wwwroot/weibot/framework/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#5 [internal function]: yii\log\Logger->flush(true)
+#6 {main}] [192.168.33.1] [["\/favicon.ico"]]
+

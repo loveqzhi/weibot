@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Yii console bootstrap file.
+ *
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ */
+
+define('PROCESS_START_TIME', microtime(true));
+//defined('YII_DEBUG') or define('YII_DEBUG', true);
+
+// fcgi doesn't have STDIN and STDOUT defined by default
+defined('STDIN') or define('STDIN', fopen('php://stdin', 'r'));
+defined('STDOUT') or define('STDOUT', fopen('php://stdout', 'w'));
+
+define('VDIR', __DIR__);
+define('WEBROOT', __DIR__);
+require(VDIR . '/framework/vendor/autoload.php');
+require(VDIR . '/framework/vendor/yiisoft/yii2/Yii.php');
+
+//$config = require(__DIR__ . '/config/console-dev.php');
+$config = require(__DIR__ . '/config/console.php');
+Yii::setAlias('@BaseComponents', VDIR . '/framework/components/');
+
+$application = new yii\console\Application($config);
+$response = $application->run();
+exit($response);
